@@ -1,0 +1,221 @@
+@use "mixins";
+
+:root {
+	//////////////////////////
+	/// Color Settings
+	//////////////////////////
+	
+	--desktop:				rgb(0,128,128);
+	--applicationworkspace:	rgb(192,192,192);
+	--windowbackground:		rgb(255,255,255);
+	--windowtext:			rgb(0,0,0);
+	--menubar:				rgb(255,255,255);
+	--menutext:				rgb(0,0,0);
+	--activetitlebar:		rgb(0,0,128);
+	--inactivetitlebar:		rgb(192,192,192);
+	--activetitlebartext:	rgb(255,255,255);
+	--inactivetitlebartext:	rgb(0,0,0);
+	--activeborder:			rgb(192,192,192);
+	--inactiveborder:		rgb(192,192,192);
+	--windowframe:			rgb(0,0,0);
+	--scrollbars:			rgb(192,192,192);
+	--buttonface:			rgb(192,192,192);
+	--buttonshadow:			rgb(128,128,128);
+	--buttontext:			rgb(0,0,0);
+	--buttonhighlight:		rgb(255,255,255);
+	--disabledtext:			rgb(192,192,192);
+	--highlight:			rgb(0,0,128);
+	--highlightedtext:		rgb(255,255,255);
+
+	// Menu, Minimize, Maximize, and Scroll buttons are not subject to color scheme changes in 3.1
+	// They use the default button color settings
+	--systembuttonface:		rgb(192,192,192);
+	--systembuttonshadow:	rgb(128,128,128);
+	--systembuttontext:		rgb(0,0,0);
+	--systembuttonhighlight:rgb(255,255,255);
+
+	--linkcolor: 			rgb(0,0,128);
+	--posttextcolor: 		rgb(68,68,68);
+	--headingcolor: 		rgb(0,0,0);
+
+	//////////////////////////
+	/// Reading Settings
+	//////////////////////////
+	
+	--linelength: 55rem;
+	--linelengthmax: 110rem;
+	--lineheight: 1.8em;
+	--paragraphspacing: 1.1em;
+	--fontfamily: "Arial", sans-serif;
+	--fontsize: 1.2rem;
+}
+
+@font-face {
+	font-family: "Libre Baskerville";
+	src:
+		url("/wp-content/themes/31theme/fonts/librebaskervillenew-light-webfont.woff2") format("woff2"),	
+		url("/wp-content/themes/31theme/fonts/librebaskervillenew-light-webfont.woff") format("woff"),
+		url("/wp-content/themes/31theme/fonts/LibreBaskervilleNew-Light.otf") format("opentype");
+}
+
+:root {
+	--font-system: Arial, sans-serif;
+	--font-heading: "Libre Baskerville", serif;
+}
+
+html {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+}
+
+body {
+	background-color: var(--desktop);
+	font-family: var(--font-system);
+	margin: 0px;
+	padding: 0px 8px;
+
+	@include mixins.mobile {
+		padding: 0px 0px;
+	}
+
+	&.maximized {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+a {
+	color: var(--linkcolor);
+}
+
+header, footer {
+	margin: 2.5rem;
+
+	@include mixins.mobile {
+		margin: 1.5rem;
+	}
+	
+	nav {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		a {
+			color: var(--buttontext);
+			text-align: center;
+			text-decoration: none;
+			margin: 0.5rem 0.5rem;
+			min-width: 5rem;
+
+			div {
+				display: inline-block;
+				background-color: var(--buttonface);
+				margin-top: 0.2rem;
+				padding: 0.1rem 0.2rem;
+			}
+		}
+	}
+}
+
+#w31-backtotop-button {
+	position: fixed;
+	height: 44px;
+	width: 44px;
+	text-align: center;
+	bottom: calc(88px + 6rem);
+	right: 3rem;
+	background-color: var(--buttonface);
+	color: var(--buttontext);
+	border-top: 2px solid var(--buttonhighlight);
+	border-left: 2px solid var(--buttonhighlight);
+	border-right: 2px solid var(--buttonshadow);
+	border-bottom: 2px solid var(--buttonshadow);
+	outline: 1px solid var(--windowframe);
+	cursor: pointer;
+	z-index: 2;
+	@include mixins.mobile { display: none; }
+}
+#w31-readingsettings-button {
+	position: fixed;
+	height: 44px;
+	width: 44px;
+	text-align: center;
+	bottom: calc(44px + 5rem);
+	right: 3rem;
+	background-color: var(--buttonface);
+	color: var(--buttontext);
+	border-top: 2px solid var(--buttonhighlight);
+	border-left: 2px solid var(--buttonhighlight);
+	border-right: 2px solid var(--buttonshadow);
+	border-bottom: 2px solid var(--buttonshadow);
+	outline: 1px solid var(--windowframe);
+	cursor: pointer;
+	z-index: 2;
+	@include mixins.mobile { display: none; }
+}
+#w31-colorsettings-button {
+	position: fixed;
+	height: 44px;
+	width: 44px;
+	text-align: center;
+	bottom: 4rem;
+	right: 3rem;
+	background-color: var(--buttonface);
+	color: var(--buttontext);
+	border-top: 2px solid var(--buttonhighlight);
+	border-left: 2px solid var(--buttonhighlight);
+	border-right: 2px solid var(--buttonshadow);
+	border-bottom: 2px solid var(--buttonshadow);
+	outline: 1px solid var(--windowframe);
+	cursor: pointer;
+	z-index: 2;
+	@include mixins.mobile { display: none; }
+}
+
+html.error404 {
+	height: 100%;
+
+	body {
+		background-color: #0000AA;
+		position: relative;
+		font-weight: bold;
+		font-size: 1.4rem;
+		height: 100%;
+		font-family: "Lucida Console", "Lucida Sans Typewriter", sans-serif;
+		text-align: center;
+
+		p {
+			text-align: left;
+			color: white;
+			line-height: 2rem;
+			margin: 2rem 0px;
+		}
+
+		.invert {
+			display: inline-block;
+			padding: 0.2rem 1rem;
+			background-color: #AAAAAA;
+			color: #0000AA;
+		}
+		.pressany {
+			color: white;
+			display: inline-block;
+		}
+
+		.blink {
+			color: #AAAAAA;
+		}
+
+		main {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+#starfield {
+	display: none;
+}

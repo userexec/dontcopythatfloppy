@@ -1,0 +1,56 @@
+#starfield {
+	background-color: black;
+	z-index: 10;
+}
+
+#starfield, .stars {
+	overflow: hidden;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+  }
+  
+  .stars {
+	background-image: 
+	  radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,1) 99%, rgba(0,0,0,0) 100%),
+	  radial-gradient(1px 1px at 100px 140px, rgba(255,255,255,1) 99%, rgba(0,0,0,0) 100%),
+	  radial-gradient(1px 1px at 150px 520px, rgba(255,255,255,1) 99%, rgba(0,0,0,0) 100%),
+	  radial-gradient(1px 1px at 590px 70px, rgba(255,255,255,1) 99%, rgba(0,0,0,0) 100%),
+	  radial-gradient(1px 1px at 500px 400px, rgba(255,255,255,1) 99%, rgba(0,0,0,0) 100%),
+	  radial-gradient(1px 1px at 420px 450px, rgba(255,255,255,1) 99%, rgba(0,0,0,0) 100%);
+	background-repeat: repeat;
+	background-size: 600px 600px;
+	animation: warp 3s infinite;
+	opacity: 0;
+  }
+  
+  .stars:nth-child(1) {
+	background-position: 50% 50%;
+	animation-delay: 0s;
+  }
+  .stars:nth-child(2) {
+	background-position: 20% 60%;
+	animation-delay: 1s;
+  }
+  .stars:nth-child(3) {
+	background-position: -20% -30%;
+	animation-delay: 2s;
+  }
+  
+  @keyframes warp {
+	0% {
+	  opacity: 0;
+	  transform: scale(1);
+	  animation-timing-function: ease-in;
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 1;
+	  transform: scale(4);
+	  animation-timing-function: linear;
+	}
+  }

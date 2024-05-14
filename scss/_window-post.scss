@@ -1,0 +1,44 @@
+@use "mixins";
+
+.w31-window.post {
+	.w31-window-inner {
+		grid-template-columns: 1fr min-content;
+		grid-template-rows: min-content 1fr min-content;
+		grid-template-areas:
+			"titlebar titlebar"
+			"content scrollbar"
+			"bottombar bottombar";
+
+		@include mixins.mobile {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"titlebar"
+				"content"
+				"bottombar";
+		}
+	}
+	
+	.w31-featured-image {
+		.w31-featured-image-inner {
+			height: 250px;
+			overflow: hidden;
+			text-align: center;
+
+			@include mixins.mobile {
+				height: 125px;
+			}
+
+			img {
+				width: 100%;
+				max-width: 60rem;
+				height: auto;
+			}
+		}
+	}
+}
+
+.w31-window.post.maximized {
+	.w31-post-title, .w31-categories {
+		text-align: center;
+	}
+}

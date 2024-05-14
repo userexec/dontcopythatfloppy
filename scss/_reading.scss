@@ -1,0 +1,100 @@
+@use "mixins";
+
+.w31-reading {
+	line-height: var(--lineheight);
+	margin: 1rem 2rem;
+	font-size: var(--fontsize);
+	color: var(--posttextcolor);
+	font-family: var(--fontfamily);
+
+	p {
+		margin: var(--paragraphspacing) 0px;
+	}
+
+	@include mixins.mobile {
+		margin: 1rem 1rem;
+	}
+
+	.w31-categories {
+		line-height: 2.5rem;
+	}
+
+	.w31-continue-reading {
+		text-align: right;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-heading);
+		color: var(--windowtext);
+	}
+	h1 { font-size: 2.2rem; line-height: 2.2rem; }
+	h2 { font-size: 2rem; line-height: 2rem; }
+	h3 { font-size: 1.8rem; line-height: 1.8rem; }
+	h4 { font-size: 1.6rem; line-height: 1.6rem; }
+	h5 { font-size: 1.4rem; line-height: 1.4rem; }
+	h6 { font-size: 1.2rem; line-height: 1.2rem; }
+
+	figure.wp-block-image {
+		border: 1px solid var(--windowframe);
+		background-color: var(--activeborder);
+		padding: 4px;
+		max-width: 48rem;
+		margin: auto;
+	
+		&:before {
+			content: "";
+			display: block;
+			text-align: center;
+			background-color: var(--activetitlebar);
+			color: var(--activetitlebartext);
+			padding: 0.7rem;
+			font-family: var(--font-reading);
+			border-top: 1px solid var(--windowframe);
+			border-right: 1px solid var(--windowframe);
+			border-left: 1px solid var(--windowframe);
+		}
+	
+		a {
+			display: block;
+			border: 1px solid var(--windowframe);
+			background-color: black;
+			text-align: center;
+		}
+	
+		figcaption {
+			border-left: 1px solid var(--windowframe);
+			border-right: 1px solid var(--windowframe);
+			border-bottom: 1px solid var(--windowframe);
+			background-color: var(--applicationworkspace);
+			margin: 0px;
+			padding: 12px 2rem 10px 2rem;
+			font-size: 1.1rem;
+			line-height: 1.1rem;
+			font-family: var(--font-system);
+			text-align: center;
+			color: var(--windowtext);
+			position: relative;
+			font-weight: bold;
+	
+			&:after {
+				content: "";
+				position: absolute;
+				left: 1rem;
+				top: 4px;
+				bottom: 4px;
+				right: 1rem;
+				background: transparent;
+				border-top: 1px solid var(--buttonshadow);
+				border-left: 1px solid var(--buttonshadow);
+				border-right: 1px solid var(--buttonhighlight);
+				border-bottom: 1px solid var(--buttonhighlight);
+			}
+		}
+	}
+}
+
+.w31-window.maximized .w31-reading {
+	margin: auto;
+	padding: 0px 2rem;
+	max-width: var(--linelengthmax);
+}

@@ -1,0 +1,65 @@
+@use "mixins";
+
+body.color-theme-loading {
+	display: none;
+}
+
+.w31-window.color-settings {
+	display: none;
+	margin-bottom: 0px;
+
+	&.active {
+		display: inline-block;
+		position: fixed;
+		max-width: 50rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+
+		&.last-foregrounded {
+			z-index: 3;
+		}
+
+		&.foreground {
+			z-index: 4;
+		}
+
+		@include mixins.mobile {
+			position: fixed !important;
+			top: 0px !important;
+			left: 0px !important;
+			transform: none !important;
+			width: 100% !important;
+			height: 100% !important;
+			max-width: 100% !important;
+		}
+	}
+
+	.w31-window-inner {
+		grid-template-columns: 1fr;
+		grid-template-rows: min-content min-content 1fr min-content;
+		grid-template-areas:
+			"titlebar"
+			"topbar"
+			"content"
+			"bottombar";
+	}
+
+	.w31-content {
+		padding: 0px 1rem;
+	}
+
+	@include mixins.mobile {
+		.w31-savetheme form {
+			display: flex;
+		}
+		.w31-button.action-delete_theme {
+			margin: 1rem;
+		}
+	}
+}
+
+.w31-window.color-settings.maximized {
+	z-index: 4;
+}

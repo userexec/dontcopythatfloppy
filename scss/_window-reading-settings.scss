@@ -1,0 +1,67 @@
+@use "mixins";
+
+.w31-window.reading-settings {
+	display: none;
+	margin-bottom: 0px;
+
+	&.active {
+		display: inline-block;
+		position: fixed;
+		max-width: 55rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+
+		&.last-foregrounded {
+			z-index: 3;
+		}
+
+		&.foreground {
+			z-index: 4;
+		}
+
+		@include mixins.mobile {
+			position: fixed !important;
+			top: 0px !important;
+			left: 0px !important;
+			transform: none !important;
+			width: 100% !important;
+			height: 100% !important;
+			max-width: 100% !important;
+		}
+	}
+
+	.w31-window-inner {
+		grid-template-columns: 1fr;
+		grid-template-rows: min-content min-content 1fr min-content;
+		grid-template-areas:
+			"titlebar"
+			"topbar"
+			"content"
+			"bottombar";
+	}
+
+	.w31-content {
+		padding: 1rem;
+
+		fieldset:nth-of-type(2) {
+			margin-bottom: 0px;
+		}
+
+		.setting {
+			margin: 0.5rem 0px;
+		}
+
+		.note {
+			text-align: center;
+			font-style: italic;
+			margin-top: 0.5rem;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.w31-window.reading-settings.maximized {
+	z-index: 4;
+}

@@ -1,0 +1,10 @@
+.w31-window.page {
+	.w31-window-inner {
+		grid-template-columns: 1fr;
+		grid-template-rows: min-content 1fr min-content;
+		grid-template-areas:
+			"titlebar"
+			"content"
+			"bottombar";
+	}
+}
