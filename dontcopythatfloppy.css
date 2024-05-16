@@ -967,6 +967,15 @@ body.color-theme-loading {
 .w31-reading p {
   margin: var(--paragraphspacing) 0px;
 }
+.w31-reading .notice {
+  background: var(--buttonface);
+  color: var(--buttontext);
+  padding: 1rem;
+  margin: 1.25rem 0px;
+}
+.w31-reading .notice span {
+  font-weight: bold;
+}
 @media screen and (max-width: 600px) {
   .w31-reading {
     margin: 1rem 1rem;

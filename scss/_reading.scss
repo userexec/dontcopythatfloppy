@@ -11,6 +11,17 @@
 		margin: var(--paragraphspacing) 0px;
 	}
 
+	.notice {
+		background: var(--buttonface);
+		color: var(--buttontext);
+		padding: 1rem;
+		margin: 1.25rem 0px;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
 	@include mixins.mobile {
 		margin: 1rem 1rem;
 	}
