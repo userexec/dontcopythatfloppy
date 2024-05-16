@@ -43,10 +43,10 @@
 		position: relative;
 
 		&.alignright {
-			margin: 0px 0px 0px 2rem;
+			margin: 0px 0px 2rem 2rem;
 		}
 		&.alignleft {
-			margin: 0px 2rem 0px 0px;
+			margin: 0px 2rem 2rem 0px;
 		}
 		&.alignright, &.alignleft {
 			@include mixins.mobile {

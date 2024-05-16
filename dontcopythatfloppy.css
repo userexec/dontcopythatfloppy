@@ -1015,10 +1015,10 @@ body.color-theme-loading {
   position: relative;
 }
 .w31-reading figure.wp-block-image.alignright, .w31-reading div.wp-block-image figure.alignright {
-  margin: 0px 0px 0px 2rem;
+  margin: 0px 0px 2rem 2rem;
 }
 .w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignleft {
-  margin: 0px 2rem 0px 0px;
+  margin: 0px 2rem 2rem 0px;
 }
 @media screen and (max-width: 600px) {
   .w31-reading figure.wp-block-image.alignright, .w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignright, .w31-reading div.wp-block-image figure.alignleft {
