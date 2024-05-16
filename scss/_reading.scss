@@ -40,12 +40,41 @@
 		padding: 4px;
 		max-width: 48rem;
 		margin: auto;
+		position: relative;
 
+		&.alignright {
+			margin: 0px 0px 0px 2rem;
+		}
+		&.alignleft {
+			margin: 0px 2rem 0px 0px;
+		}
 		&.alignright, &.alignleft {
 			@include mixins.mobile {
 				float: none;
 				margin: auto;
 			}
+		}
+
+		&.video::after {
+			content: "⏵";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			text-align: center;
+			width: 5rem;
+			background-color: var(--buttonface);
+			transform: translate(-50%,-50%);
+			font-family: var(--font-system);
+			font-size: 4rem;
+			color: var(--buttontext);
+			border-top: 2px solid var(--buttonhighlight);
+			border-left: 2px solid var(--buttonhighlight);
+			border-right: 2px solid var(--buttonshadow);
+			border-bottom: 2px solid var(--buttonshadow);
+			outline: 1px solid var(--windowframe);
+			cursor: pointer;
+			line-height: 5rem;
+			pointer-events: none;
 		}
 	
 		a {

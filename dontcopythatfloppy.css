@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --desktop:	rgb(0,128,128);
   --applicationworkspace:	rgb(192,192,192);
@@ -1011,12 +1012,40 @@ body.color-theme-loading {
   padding: 4px;
   max-width: 48rem;
   margin: auto;
+  position: relative;
+}
+.w31-reading figure.wp-block-image.alignright, .w31-reading div.wp-block-image figure.alignright {
+  margin: 0px 0px 0px 2rem;
+}
+.w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignleft {
+  margin: 0px 2rem 0px 0px;
 }
 @media screen and (max-width: 600px) {
   .w31-reading figure.wp-block-image.alignright, .w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignright, .w31-reading div.wp-block-image figure.alignleft {
     float: none;
     margin: auto;
   }
+}
+.w31-reading figure.wp-block-image.video::after, .w31-reading div.wp-block-image figure.video::after {
+  content: "⏵";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 5rem;
+  background-color: var(--buttonface);
+  transform: translate(-50%, -50%);
+  font-family: var(--font-system);
+  font-size: 4rem;
+  color: var(--buttontext);
+  border-top: 2px solid var(--buttonhighlight);
+  border-left: 2px solid var(--buttonhighlight);
+  border-right: 2px solid var(--buttonshadow);
+  border-bottom: 2px solid var(--buttonshadow);
+  outline: 1px solid var(--windowframe);
+  cursor: pointer;
+  line-height: 5rem;
+  pointer-events: none;
 }
 .w31-reading figure.wp-block-image a, .w31-reading div.wp-block-image figure a {
   display: block;
