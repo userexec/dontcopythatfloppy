@@ -34,24 +34,18 @@
 	h5 { font-size: 1.4rem; line-height: 1.4rem; }
 	h6 { font-size: 1.2rem; line-height: 1.2rem; }
 
-	figure.wp-block-image {
+	figure.wp-block-image, div.wp-block-image figure {
 		border: 1px solid var(--windowframe);
 		background-color: var(--activeborder);
 		padding: 4px;
 		max-width: 48rem;
 		margin: auto;
-	
-		&:before {
-			content: "";
-			display: block;
-			text-align: center;
-			background-color: var(--activetitlebar);
-			color: var(--activetitlebartext);
-			padding: 0.7rem;
-			font-family: var(--font-reading);
-			border-top: 1px solid var(--windowframe);
-			border-right: 1px solid var(--windowframe);
-			border-left: 1px solid var(--windowframe);
+
+		&.alignright, &.alignleft {
+			@include mixins.mobile {
+				float: none;
+				margin: auto;
+			}
 		}
 	
 		a {
@@ -68,13 +62,12 @@
 			background-color: var(--applicationworkspace);
 			margin: 0px;
 			padding: 12px 2rem 10px 2rem;
-			font-size: 1.1rem;
-			line-height: 1.1rem;
+			font-size: 1rem;
+			line-height: 1rem;
 			font-family: var(--font-system);
 			text-align: center;
 			color: var(--windowtext);
 			position: relative;
-			font-weight: bold;
 	
 			&:after {
 				content: "";
