@@ -31,7 +31,7 @@
   --linelength: 55rem;
   --linelengthmax: 110rem;
   --lineheight: 1.8em;
-  --paragraphspacing: 1.1em;
+  --paragraphspacing: 1.5em;
   --fontfamily: "Arial", sans-serif;
   --fontsize: 1.2rem;
 }
@@ -794,9 +794,10 @@ fieldset label {
 }
 .w31-window.posts .w31-content {
   padding: 1rem;
+  padding-top: 0px;
 }
 .w31-window.posts .w31-content .w31-scroller {
-  height: 10rem;
+  height: 13rem;
   border: 1px solid var(--windowframe);
   box-sizing: border-box;
 }
@@ -997,27 +998,27 @@ body.color-theme-loading {
 }
 .w31-reading h1 {
   font-size: 2.2rem;
-  line-height: 2.2rem;
+  line-height: 2.7rem;
 }
 .w31-reading h2 {
   font-size: 2rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
 .w31-reading h3 {
   font-size: 1.8rem;
-  line-height: 1.8rem;
+  line-height: 2.3rem;
 }
 .w31-reading h4 {
   font-size: 1.6rem;
-  line-height: 1.6rem;
+  line-height: 2.1rem;
 }
 .w31-reading h5 {
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 1.9rem;
 }
 .w31-reading h6 {
   font-size: 1.2rem;
-  line-height: 1.2rem;
+  line-height: 1.7rem;
 }
 .w31-reading figure.wp-block-image, .w31-reading div.wp-block-image figure {
   border: 1px solid var(--windowframe);

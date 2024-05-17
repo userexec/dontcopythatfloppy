@@ -9,7 +9,7 @@ let globals = {
 		linelength: "55rem",
 		linelengthmax: "110rem",
 		lineheight: "1.8rem",
-		paragraphspacing: "1.1rem",
+		paragraphspacing: "1.5rem",
 		fontfamily: '"Arial", sans-serif',
 		fontsize: "1.2rem",
 		screensaverdelay: 600000,
