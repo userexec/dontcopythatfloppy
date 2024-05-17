@@ -552,7 +552,7 @@ let globals = {
 			buttontext: "#000000",
 			buttonhighlight: "#FFFFFF",
 			disabledtext: "#C0C0C0",
-			highlight: "#800000",
+			highlight: "#000000",
 			highlightedtext: "#FFFFFF",
 			systembuttonface: "#C0C0C0",
 			systembuttonshadow: "#808080",
