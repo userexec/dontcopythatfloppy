@@ -13,6 +13,7 @@
 	outline: 1px solid var(--windowframe);
 	padding: 0.4rem 1rem;
 	cursor: pointer;
+	border-radius: 0px;
 
 	&:disabled {
 		color: var(--buttonshadow);
@@ -31,6 +32,7 @@ input[type=text], input[type=search], input[type=number] {
 	outline: 1px solid var(--windowframe);
 	border: none;
 	width: 100%;
+	border-radius: 0px;
 
 	&:disabled {
 		background-color: var(--buttonface);
@@ -50,6 +52,7 @@ input[type=color] {
 	outline: 1px solid var(--windowframe);
 	padding: 0.2rem 0.2rem;
 	cursor: pointer;
+	border-radius: 0px;
 }
 
 select {
@@ -62,6 +65,7 @@ select {
 	outline: 1px solid var(--windowtext);
 	padding: 0px 0.5rem;
 	border: none;
+	border-radius: 0px;
 
 	&:disabled {
 		background-color: var(--buttonface);
