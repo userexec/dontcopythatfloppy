@@ -45,7 +45,7 @@
 	h5 { font-size: 1.4rem; line-height: 1.9rem; }
 	h6 { font-size: 1.2rem; line-height: 1.7rem; }
 
-	figure.wp-block-image, div.wp-block-image figure, .wp-block-gallery figure.wp-block-image {
+	figure.wp-block-image, div.wp-block-image figure, .wp-block-gallery figure.wp-block-image, .wp-block-gallery.has-nested-images figure.wp-block-image {
 		border: 1px solid var(--windowframe);
 		background-color: var(--activeborder);
 		padding: 4px;
