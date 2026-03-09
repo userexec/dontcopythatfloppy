@@ -1020,7 +1020,7 @@ body.color-theme-loading {
   font-size: 1.2rem;
   line-height: 1.7rem;
 }
-.w31-reading figure.wp-block-image, .w31-reading div.wp-block-image figure {
+.w31-reading figure.wp-block-image, .w31-reading div.wp-block-image figure, .w31-reading .wp-block-gallery figure.wp-block-image {
   border: 1px solid var(--windowframe);
   background-color: var(--activeborder);
   padding: 4px;
@@ -1028,19 +1028,19 @@ body.color-theme-loading {
   margin: auto;
   position: relative;
 }
-.w31-reading figure.wp-block-image.alignright, .w31-reading div.wp-block-image figure.alignright {
+.w31-reading figure.wp-block-image.alignright, .w31-reading div.wp-block-image figure.alignright, .w31-reading .wp-block-gallery figure.wp-block-image.alignright {
   margin: 0px 0px 2rem 2rem;
 }
-.w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignleft {
+.w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignleft, .w31-reading .wp-block-gallery figure.wp-block-image.alignleft {
   margin: 0px 2rem 2rem 0px;
 }
 @media screen and (max-width: 600px) {
-  .w31-reading figure.wp-block-image.alignright, .w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignright, .w31-reading div.wp-block-image figure.alignleft {
+  .w31-reading figure.wp-block-image.alignright, .w31-reading figure.wp-block-image.alignleft, .w31-reading div.wp-block-image figure.alignright, .w31-reading div.wp-block-image figure.alignleft, .w31-reading .wp-block-gallery figure.wp-block-image.alignright, .w31-reading .wp-block-gallery figure.wp-block-image.alignleft {
     float: none;
     margin: auto;
   }
 }
-.w31-reading figure.wp-block-image.video::after, .w31-reading div.wp-block-image figure.video::after {
+.w31-reading figure.wp-block-image.video::after, .w31-reading div.wp-block-image figure.video::after, .w31-reading .wp-block-gallery figure.wp-block-image.video::after {
   content: "⏵";
   position: absolute;
   top: 50%;
@@ -1061,27 +1061,30 @@ body.color-theme-loading {
   line-height: 5rem;
   pointer-events: none;
 }
-.w31-reading figure.wp-block-image > a, .w31-reading div.wp-block-image figure > a {
+.w31-reading figure.wp-block-image > a, .w31-reading div.wp-block-image figure > a, .w31-reading .wp-block-gallery figure.wp-block-image > a {
   display: block;
   border: 1px solid var(--windowframe);
   background-color: black;
   text-align: center;
 }
-.w31-reading figure.wp-block-image figcaption, .w31-reading div.wp-block-image figure figcaption {
+.w31-reading figure.wp-block-image figcaption, .w31-reading div.wp-block-image figure figcaption, .w31-reading .wp-block-gallery figure.wp-block-image figcaption {
   border-left: 1px solid var(--windowframe);
   border-right: 1px solid var(--windowframe);
   border-bottom: 1px solid var(--windowframe);
   background-color: var(--applicationworkspace);
   margin: 0px;
-  padding: 12px 2rem 10px 2rem;
+  padding: 12px 2rem 12px 2rem;
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 1.3rem;
   font-family: var(--font-system);
   text-align: center;
   color: var(--windowtext);
   position: relative;
+  background: transparent;
+  text-shadow: none;
+  will-change: auto;
 }
-.w31-reading figure.wp-block-image figcaption:after, .w31-reading div.wp-block-image figure figcaption:after {
+.w31-reading figure.wp-block-image figcaption:after, .w31-reading div.wp-block-image figure figcaption:after, .w31-reading .wp-block-gallery figure.wp-block-image figcaption:after {
   content: "";
   position: absolute;
   left: 1rem;
@@ -1093,6 +1096,9 @@ body.color-theme-loading {
   border-left: 1px solid var(--buttonshadow);
   border-right: 1px solid var(--buttonhighlight);
   border-bottom: 1px solid var(--buttonhighlight);
+}
+.w31-reading .wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) a, .w31-reading .w31-reading .wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img {
+  width: auto;
 }
 
 .w31-window.maximized .w31-reading {
